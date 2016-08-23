@@ -1,0 +1,54 @@
+/// Images to use to for icons in mobile navigation.
+///
+/// Possible values:
+///
+/// - `"default"`: Use images from default theme.
+/// - `"custom"`: Use images from current theme directory.
+///
+/// Custom images have to placed in a `mobile_navigation` directory
+/// inside the theme's image directory.  See images in
+/// `pageflow/themes/default/mobile_navigation` for samples of the
+/// required images.
+$outline-navigation-bar-mobile-images: $mobile-navigation-images !default;
+
+$image-dir: "pageflow/themes/default/mobile_navigation";
+
+@if $outline-navigation-bar-mobile-images == "custom" {
+  $image-dir: "pageflow/themes/#{$theme-name}/mobile_navigation";
+}
+
+.toggle {
+  a {
+    background-position: -45px 0;
+    background-size: auto 100%;
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    &.active {
+      background-position: 0 0;
+    }
+  }
+
+  &.chapters a {
+    background-image: image-url("#{$image-dir}/index_sprite.png");
+  }
+
+  &.credits a {
+    background-image: image-url("#{$image-dir}/imprint_sprite.png");
+  }
+
+  &.share a {
+    @if $navigation-display-share-button {
+      background-image: image-url("#{$image-dir}/sharing_sprite.png");
+    } @else {
+      display: none;
+    }
+  }
+}
+
+.mobile_sharing a {
+  &::before {
+    background-image: image-url("#{$image-dir}/sharing_icons_sprite.png");
+  }
+}

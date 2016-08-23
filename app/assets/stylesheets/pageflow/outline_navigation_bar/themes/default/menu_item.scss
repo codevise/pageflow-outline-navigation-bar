@@ -98,7 +98,7 @@
 }
 
 @mixin menu-item-shadow {
-  .button:before {
+  .button:after {
     content: "";
     display: block;
     position: absolute;
@@ -112,7 +112,7 @@
 }
 
 @mixin menu-item-shadow-off {
-  .button:before {
+  .button:after {
     display: none;
   }
 }
