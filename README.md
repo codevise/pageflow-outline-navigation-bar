@@ -24,7 +24,8 @@ Include javascripts and stylesheets:
     # app/assets/stylesheets/pageflow/themes/default.css.scss
     @import "pageflow/outline_navigation_bar/themes/default";
 
-Execute `bundle install` Restart the application server.
+Execute `bundle install` and restart the application server. Now the
+widget type can be enabled in your feature settings.
 
 ## Troubleshooting
 
