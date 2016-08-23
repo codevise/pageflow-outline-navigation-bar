@@ -3,29 +3,29 @@
     <%= render('pageflow/outline_navigation_bar/widget/home_button', home_button: entry.home_button) %>
 
     <li class="top menu_item">
-      <%= link_to("##{entry.pages.first.try(:perma_id)}", tabindex: '2', title: t('.first_page_title')) do %>
+      <%= link_to("##{entry.pages.first.try(:perma_id)}", tabindex: '2', title: t('pageflow.public.goto_first_page')) do %>
         <span class="button"></span>
-        <span class="label"><%= t('.first_page') %></span>
+        <span class="label"><%= t('pageflow.public.first_page') %></span>
       <% end %>
     </li>
 
     <%= render('pageflow/outline_navigation_bar/widget/overview_button', overview_button: entry.overview_button) %>
 
     <li class="fullscreen menu_item">
-      <a tabindex="2" title="<%= t('.enter_fullscreen') %>" data-active-title="<%= t('.leave_fullscreen') %>">
+      <a tabindex="2" title="<%= t('pageflow.public.enter_fullscreen') %>" data-active-title="<%= t('pageflow.public.leave_fullscreen') %>">
         <span class="button"></span>
-        <span class="label"><%= t('.fullscreen') %></span>
+        <span class="label"><%= t('pageflow.public.fullscreen') %></span>
       </a>
     </li>
     <li class="hide_text menu_item">
-      <a tabindex="2" title="<%= t('.hide_text') %>" data-active-title="<%= t('.show_text') %>">
+      <a tabindex="2" title="<%= t('pageflow.public.hide_text') %>" data-active-title="<%= t('pageflow.public.show_text') %>">
         <span class="button"></span>
-        <span class="label"><%= t('.hide_text') %></span>
+        <span class="label"><%= t('pageflow.public.hide_text') %></span>
       </a>
     </li>
 
     <li class="volume menu_item">
-      <div class="navigation_volume_box" title="<%= t('.volume') %>">
+      <div class="navigation_volume_box" title="<%= t('pageflow.public.volume') %>">
         <div class="volume-control">
           <div class="volume-slider">
             <div class="volume-level" style="width: 100%;"><span class="volume-control-text"></span></div>
@@ -48,13 +48,13 @@
         </div>
 
         <div class="sub_share">
-          <a tabindex="2" target="_blank"><%= t('pageflow.widgets.share_menu.entry') %></a>
-          <a tabindex="2" target="_blank"><%= t('pageflow.widgets.share_menu.current_page') %></a>
+          <a tabindex="2" target="_blank"><%= t('pageflow.public.share_this_entry') %></a>
+          <a tabindex="2" target="_blank"><%= t('pageflow.public.share_this_page') %></a>
         </div>
       </div>
-      <a title="<%= t('.share') %>">
+      <a title="<%= t('pageflow.public.share') %>">
         <span class="navigation_bg navigation_share button"></span>
-        <span class="label"><%= t('.share') %></span>
+        <span class="label"><%= t('pageflow.public.share') %></span>
       </a>
     </li>
 
@@ -62,9 +62,9 @@
       <div class="menu_box credits_box">
         <%= render 'pageflow/entries/navigation/credits_box_content', :entry => entry %>
       </div>
-      <a title="<%= t('.imprint') %>">
+      <a title="<%= t('pageflow.public.imprint') %>">
         <span class="button"></span>
-        <span class="label"><%= t('.imprint') %></span>
+        <span class="label"><%= t('pageflow.public.imprint') %></span>
       </a>
     </li>
   </ul>
