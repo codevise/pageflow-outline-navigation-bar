@@ -1,21 +1,40 @@
 @import "./default/cross_dependant_styles";
 @import "./default/widget_margin";
 
+/// Type of icons to use:
+///
+/// - `"icon-font"`: Circular buttons with font awesome icons.
+///
+/// - `"sprite"`: Custom icons from `icon_sprite.png` in theme
+///   directory.
+$outline-navigation-bar-icons: $widget-icons !default;
+
+/// @see $default-widget-icon-font-options
+$outline-navigation-bar-icon-font-options: (
+  share-icon-color: #fff,
+  active-share-icon-color: $main-color
+) !default;
+
 .outline_navigation_bar {
+  @import "./default/mixins";
+
+  @import "./default/icons/icon_font";
+  @import "./default/icons/sprite";
+
   $basic-text-color: #fff !default;
 
   $outline-navigation-bar-basic-background-color: $basic-background-color-transparent !default;
   $outline-navigation-bar-active-chapter-color: $main-color !default;
 
-  $outline-navigation-bar-menu-box-background-color: #fff !default;
-  $outline-navigation-bar-menu-box-color: #000 !default;
+  $outline-navigation-bar-menu-box-background-color: $widget-background-color !default;
+  $outline-navigation-bar-menu-box-color: $widget-text-color !default;
 
-  $outline-navigation-bar-sprite: $navigation-bar-sprite !default;
-
-  @mixin small-height {
-    @media screen and (max-height: 600px) {
-      @content;
-    }
+  @if $outline-navigation-bar-icons == "sprite" {
+    @include outline-navigation-bar-icons-sprite;
+  } @else {
+    @include outline-navigation-bar-icons-icon-font(
+      widget-icon-font-options($outline-navigation-bar-icon-font-options)...
+    );
   }
 
   position: absolute;

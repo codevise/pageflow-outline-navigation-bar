@@ -2,7 +2,7 @@
   <ul class="menu_items">
     <%= render('pageflow/outline_navigation_bar/widget/home_button', home_button: entry.home_button) %>
 
-    <li class="top menu_item">
+    <li class="top buttons_menu_item menu_item">
       <%= link_to("##{entry.pages.first.try(:perma_id)}", tabindex: '2', title: t('pageflow.public.goto_first_page')) do %>
         <span class="button"></span>
         <span class="label"><%= t('pageflow.public.first_page') %></span>
@@ -11,20 +11,20 @@
 
     <%= render('pageflow/outline_navigation_bar/widget/overview_button', overview_button: entry.overview_button) %>
 
-    <li class="fullscreen menu_item">
+    <li class="fullscreen buttons_menu_item menu_item">
       <a tabindex="2" title="<%= t('pageflow.public.enter_fullscreen') %>" data-active-title="<%= t('pageflow.public.leave_fullscreen') %>">
         <span class="button"></span>
         <span class="label"><%= t('pageflow.public.fullscreen') %></span>
       </a>
     </li>
-    <li class="hide_text menu_item">
+    <li class="hide_text buttons_menu_item menu_item">
       <a tabindex="2" title="<%= t('pageflow.public.hide_text') %>" data-active-title="<%= t('pageflow.public.show_text') %>">
         <span class="button"></span>
         <span class="label"><%= t('pageflow.public.hide_text') %></span>
       </a>
     </li>
 
-    <li class="volume menu_item">
+    <li class="volume buttons_menu_item menu_item">
       <div class="navigation_volume_box" title="<%= t('pageflow.public.volume') %>">
         <div class="volume-control">
           <div class="volume-slider">
@@ -35,7 +35,7 @@
       </div>
     </li>
 
-    <li class="share menu_item" tabindex="2">
+    <li class="share buttons_menu_item menu_item" tabindex="2">
       <div class="menu_box share_box navigation_share_box">
         <div class="menu_item share_facebook">
           <%= render('pageflow/entries/share_menu/facebook_link', entry: entry) %>
@@ -58,7 +58,7 @@
       </a>
     </li>
 
-    <li class="credits menu_item" tabindex="2">
+    <li class="credits buttons_menu_item menu_item" tabindex="2">
       <div class="menu_box credits_box">
         <%= render 'pageflow/entries/navigation/credits_box_content', :entry => entry %>
       </div>

@@ -1,0 +1,177 @@
+@mixin outline-navigation-bar-icons-icon-font(
+  $button-background-color,
+  $active-button-background-color,
+
+  $button-icon-color,
+  $active-button-icon-color,
+  $deactivated-button-icon-color,
+
+  $share-icon-color,
+  $active-share-icon-color
+) {
+  .toggle.buttons,
+  .buttons_menu_item {
+    > a {
+      display: block;
+      position: relative;
+      padding: 10px 0;
+      text-decoration: none;
+
+      > .button {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 18px;
+        line-height: 28px;
+        margin: 0 auto 5px auto;
+        position: relative;
+        background-color: $button-background-color;
+        box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.2);
+        color: $button-icon-color;
+        font-size: 16px;
+        text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.6);
+        text-align: center;
+      }
+
+      &:hover > .button,
+      &.active > .button {
+        background-color: $active-button-background-color;
+        color: $active-button-icon-color;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      &:active > .button {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        @include transform(translate(1px, 1px));
+      }
+    }
+  }
+
+  .buttons_menu_item.top {
+    padding-top: 0;
+
+    .button {
+      font-weight: bold;
+      @include fa-arrow-circle-up-icon;
+    }
+  }
+
+  .buttons_menu_item.home {
+    padding-top: 0;
+
+    .button {
+      font-weight: bold;
+      @include fa-home-icon;
+    }
+  }
+
+  .buttons_menu_item.toggle_overview {
+    .button {
+      @include fa-th-icon;
+    }
+  }
+
+  .buttons_menu_item.fullscreen {
+    .button {
+      font-weight: bold;
+      @include fa-expand-icon;
+    }
+  }
+
+  .buttons_menu_item.hide_text {
+    .button {
+      font-weight: bold;
+      @include fa-photo-icon;
+    }
+  }
+
+  .buttons_menu_item.share {
+    > a > .button {
+      font-weight: bold;
+      @include fa-share-icon;
+    }
+  }
+
+  .buttons_menu_item.credits {
+    .button {
+      font-weight: bold;
+      @include fa-info-icon;
+    }
+  }
+
+  .share_box {
+    .share {
+      width: 45px;
+
+      &:hover,
+      &.active {
+        .button:before {
+          color: $active-share-icon-color;
+        }
+      }
+    }
+
+    .button {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .share_box {
+    .button.share_google,
+    .button.share_facebook,
+    .button.share_twitter {
+      font-size: 1.5em;
+
+      &:before {
+        color: $share-icon-color;
+      }
+    }
+
+    .button.share_google {
+      @include fa-google-plus-icon;
+    }
+
+    .button.share_facebook {
+      @include fa-facebook-icon;
+    }
+
+    .button.share_twitter {
+      @include fa-twitter-icon;
+    }
+  }
+
+  .volume-control:before,
+  .volume-slider:before {
+    color: $button-background-color;
+    position: absolute;
+
+    @include small-height {
+      display: none;
+    }
+  }
+
+  .volume-control {
+    @include fa-volume-down-icon;
+
+    &:before {
+      right: 25px;
+      top: 80%;
+    }
+  }
+
+  .volume-slider {
+    @include fa-volume-up-icon;
+
+    &:before {
+      right: -5px;
+      top: -30%;
+    }
+  }
+
+  .toggle.buttons {
+    .button {
+      @include fa-reorder-icon;
+    }
+  }
+}

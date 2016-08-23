@@ -4,35 +4,6 @@
 
   .volume-control {
     height: 100%;
-
-    &:before,
-    &:after,
-    .volume-level:before {
-      @extend %pageflow_sprite_icon;
-      position: absolute;
-      width: 28px;
-      height: 19px;
-      content: " ";
-      background-repeat: no-repeat;
-      top: 8px;
-    }
-
-    &:before {
-      @include pageflow-sprite-icon-volume-down;
-      top: 80%;
-    }
-
-    &:after {
-      @include pageflow-sprite-icon-volume-up;
-      top: 7%;
-    }
-
-    &:after,
-    &:before {
-      @include small-height {
-        display: none;
-      }
-    }
   }
 }
 
@@ -59,13 +30,15 @@
     position: absolute;
 
     &:before {
+      position: absolute;
       display: block;
       content: "";
+      background-image: image-url("pageflow/outline_navigation_bar/volume_control_sprite.png");
       background-position: -66px top;
-      top: -9px !important;
-      width: 18px !important;
-      height: 16px !important;
-      left: -6px !important;
+      top: -9px;
+      width: 18px;
+      height: 16px;
+      left: -6px;
     }
   }
 }
