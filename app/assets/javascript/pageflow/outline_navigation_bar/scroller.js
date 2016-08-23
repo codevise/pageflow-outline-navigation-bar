@@ -43,6 +43,13 @@
       this.list.pageNavigationList({
         scroller: this.iscroll,
         scrollToActive: this.options.isFixed,
+        highlightedPage: {
+          customNavigationBarMode: function(storylineId, entryData) {
+            if (!entryData.getStorylineConfiguration(storylineId).main) {
+              return 'inherit_from_parent';
+            }
+          }
+        }
       });
     },
 

@@ -6,19 +6,6 @@
 
   $.widget('pageflow.outlineNavigationBar', {
     _create: function() {
-      ///////// TERRIBLE HACK
-      // Ensure all storylines inherit the parent navigation bar for highlighting when this widget is enabled.
-
-      if (pageflow.entryData.getStorylineConfiguration) {
-        pageflow.HighlightedPage.prototype.getNavigationBarMode = function(storylineId) {
-          if (!pageflow.entryData.getStorylineConfiguration(storylineId).main) {
-            return 'inherit_from_parent';
-          }
-        };
-      }
-
-      /////////
-
       this.element.toggleClass('expandable', !this._isFixed());
 
       this.expander = this._setupExpander();
