@@ -1,8 +1,8 @@
 de:
   pageflow:
     outline_navigation_bar:
+      expandable:
+        widget_type_name: Navigationsleiste mit Kapiteltiteln (aufklappbar)
       feature_name: Navigationsleiste mit Kapiteltiteln
       fixed:
         widget_type_name: Navigationsleiste mit Kapiteltiteln (fixiert)
-      expandable:
-        widget_type_name: Navigationsleiste mit Kapiteltiteln (aufklappbar)
