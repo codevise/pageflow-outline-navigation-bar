@@ -1,0 +1,8 @@
+en:
+  pageflow:
+    outline_navigation_bar:
+      feature_name: Navigation bar with chapter titles
+      fixed:
+        widget_type_name: Chapter titles navigation bar (fixed)
+      expandable:
+        widget_type_name: Chapter titles navigation bar (exapandable)
