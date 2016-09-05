@@ -1,3 +1,9 @@
+/// Display social share menu
+$outline-navigation-bar-display-share-button: $navigation-display-share-button !default;
+
+/// Display hide text menu button
+$outline-navigation-bar-display-hide-text-button: $navigation-display-hide-text-button !default;
+
 .menu_items {
   margin: 0;
   padding: 0;
@@ -11,5 +17,17 @@
     height: 25%;
     min-height: 100px;
     max-height: 200px;
+  }
+}
+
+@if not $outline-navigation-bar-display-share-button {
+  .menu_item.share {
+    display: none;
+  }
+}
+
+@if not $outline-navigation-bar-display-hide-text-button {
+  .menu_item.hide_text {
+    display: none;
   }
 }
