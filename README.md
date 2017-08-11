@@ -21,7 +21,7 @@ Include javascripts and stylesheets:
     # app/assets/javascripts/pageflow/application.js
     //= require pageflow/outline_navigation_bar
 
-    # app/assets/stylesheets/pageflow/themes/default.css.scss
+    # app/assets/stylesheets/pageflow/themes/default.scss
     @import "pageflow/outline_navigation_bar/themes/default";
 
 Execute `bundle install` and restart the application server. Now the
