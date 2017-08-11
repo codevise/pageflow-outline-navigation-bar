@@ -2,6 +2,10 @@
   height: 45px;
   position: absolute;
 
+  &.chapters {
+    top: 15px;
+  }
+
   &.share,
   &.credits {
     opacity: 0;

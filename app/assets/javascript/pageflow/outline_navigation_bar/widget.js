@@ -38,7 +38,7 @@
           widget.resizer.expand();
           widget.scroller.expand();
 
-          if (mobileLayout()) {
+          if (phoneLayout()) {
             hidePageContent();
           }
         },
@@ -212,7 +212,11 @@
   });
 
   function mobileLayout() {
-    return ($('body').width() <= 900);
+    return ($('body').width() <= 900) || pageflow.browser.has('mobile platform');
+  }
+
+  function phoneLayout() {
+    return ($('body').width() <= 700);
   }
 
   function hidePageContent() {

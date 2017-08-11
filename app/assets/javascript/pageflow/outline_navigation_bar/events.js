@@ -1,30 +1,34 @@
-pageflow.outlineNavigationBar.events = {
-  pointerUp: 'touchend mouseup MSPointerUp pointerup',
-  pointerDown: 'touchstart mousedown MSPointerDown pointerdown',
+pageflow.outlineNavigationBar.events = (function() {
+  var hasPointerEvents = window.PointerEvent || window.MSPointerEvent;
 
-  onPointerDown: function(element, selectorOrHandler, handler) {
-    var selector = handler ? selectorOrHandler : null;
-    handler = handler || selectorOrHandler;
+  return {
+    pointerUp: hasPointerEvents ? 'MSPointerUp pointerup mouseup' : 'touchend mouseup',
+    pointerDown: hasPointerEvents ? 'MSPointerDown pointerdown mousedown' : 'touchstart mousedown',
 
-    this._onPointerDown(handler, function(event, fn) {
-      element.on(event, selector, fn);
-    });
-  },
+    onPointerDown: function(element, selectorOrHandler, handler) {
+      var selector = handler ? selectorOrHandler : null;
+      handler = handler || selectorOrHandler;
 
-  _onPointerDown: function(handler, on) {
-    on(this.pointerDown, function(event) {
-      event.preventDefault();
-      handler.call(this);
-    });
+      this._onPointerDown(handler, function(event, fn) {
+        element.on(event, selector, fn);
+      });
+    },
 
-    on('click', function(event) {
-      event.preventDefault();
-    });
-
-    on('keypress', function(event) {
-      if (event.which == 13) {
+    _onPointerDown: function(handler, on) {
+      on(this.pointerDown, function(event) {
+        event.preventDefault();
         handler.call(this);
-      }
-    });
-  },
-};
+      });
+
+      on('click', function(event) {
+        event.preventDefault();
+      });
+
+      on('keypress', function(event) {
+        if (event.which == 13) {
+          handler.call(this);
+        }
+      });
+    },
+  };
+}());
