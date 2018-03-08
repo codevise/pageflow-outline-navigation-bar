@@ -25,7 +25,7 @@
   }
 
   li {
-    margin-left: 6px;
+    @include margin-start(6px);
     padding-bottom: 2px;
   }
 
@@ -38,7 +38,7 @@
     font-weight: normal;
     font-size: 17px;
     line-height: 20px;
-    border-left: solid 6px rgba(255, 255, 255, 0.3);
+    @include border-start(solid 6px rgba(255, 255, 255, 0.3));
     white-space: nowrap;
 
     height: 10px;
@@ -52,19 +52,22 @@
 
   a.in_active_chapter {
     color: $outline-navigation-bar-active-chapter-color;
-    border-left: solid 6px $outline-navigation-bar-active-chapter-color;
+    @include border-start(solid 6px $outline-navigation-bar-active-chapter-color);
   }
 }
 
 &.fixed {
   .chapters_panel {
     li {
-      margin-left: 3px;
+      @include margin-start(3px);
     }
 
     a {
-      border-left-width: 2px;
-      padding: 0 10px 0 6px;
+      @include border-start-width(2px);
+      padding-top: 0;
+      padding-bottom: 0;
+      @include padding-start(6px);
+      @include padding-end(10px);
     }
   }
 }
