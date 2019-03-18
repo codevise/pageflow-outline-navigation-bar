@@ -161,10 +161,12 @@
       });
 
       var shareBox = $('.share_box', this.element),
-          shareLinks = $('a', shareBox);
+          shareLinks = $('.share_box_icons > .menu_item > a', shareBox);
 
       shareBox.shareMenu({
-        insertAfter: shareLinks.parent().last(),
+        subMenu: $('.sub_share', element),
+        links: shareLinks,
+        insertAfter: $('.share_box_icons'),
         closeOnMouseLeaving: shareBox
       });
     },

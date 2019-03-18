@@ -1,20 +1,38 @@
-.share_box {
-  top: 0;
-  width: 210px;
+.navigation_share_box {
+  padding: 15px;
+  text-align: center;
 
-  a {
-    float: left;
-    text-decoration: none;
-    width: 70px;
-  }
+  .share_box_icons {
+    display: flex;
+    text-align: center;
 
-  p {
-    font-size: 9px;
-    margin: 0;
-  }
+    .menu_item {
+      min-height: 50px;
+      margin: 0 auto;
+    }
 
-  .menu_item {
-    padding: 0 10px;
-    min-height: 0;
+    a {
+      float: left;
+      position: relative;
+      width: 60px;
+      height: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 auto;
+
+      svg {
+        width: 60px;
+        height: 25px;
+        margin-bottom: 7px;
+      }
+
+      p {
+        font-family: SourceSansPro;
+        font-size: 13px;
+        text-align: center;
+        line-height: 1;
+        margin: 0;
+      }
+    }
   }
 }
