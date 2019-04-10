@@ -11,6 +11,11 @@
       margin: 0 auto;
     }
 
+    a.share.whats_app,
+    a.share.telegram {
+      display: none;
+    }
+
     a {
       float: left;
       position: relative;

@@ -21,19 +21,6 @@
     }
   }
 
-  /* only show WhatsApp share button on iOS devices */
-  @supports (-webkit-overflow-scrolling: touch) {
-    li.whats_app {
-      display: block;
-    }
-  }
-
-  @supports not (-webkit-overflow-scrolling: touch) {
-    li.whats_app {
-      display: none;
-    }
-  }
-
   .sub_share a {
     color: white;
     font-family: SourceSansPro;
