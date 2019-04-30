@@ -31,3 +31,12 @@ $outline-navigation-bar-display-hide-text-button: $navigation-display-hide-text-
     display: none;
   }
 }
+
+&.without_sharing_button,
+&.mobile_sharing_only {
+  .menu_item.share {
+    display: none;
+  }
+}
+
+

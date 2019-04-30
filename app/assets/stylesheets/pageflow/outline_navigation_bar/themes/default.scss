@@ -14,7 +14,6 @@ $outline-navigation-bar-icon-font-options: () !default;
 
 .outline_navigation_bar {
   @import "./default/mixins";
-  @import "./default/icons/share_icons";
   @import "./default/icons/icon_font";
   @import "./default/icons/sprite";
 
@@ -77,8 +76,14 @@ $outline-navigation-bar-icon-font-options: () !default;
   @import "./default/menu_items";
   @import "./default/toggle";
   @import "./default/volume_box";
-  @import "./default/share_box";
   @import "./default/credits_box";
   @import "./default/mobile_sharing";
   @import "./default/scroller";
+}
+
+body.has_no_phone_platform {
+  .menu_item.share_whats_app,
+  .menu_item.share_telegram {
+    display: none !important;
+  }
 }
