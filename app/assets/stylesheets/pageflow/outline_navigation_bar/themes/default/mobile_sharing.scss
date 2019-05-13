@@ -2,7 +2,7 @@
   li {
     > a {
       display: block;
-      margin-left: 78px;
+      margin-left: 70px;
       color: white;
       text-decoration: none;
       font-size: 24px;
@@ -10,26 +10,13 @@
       border: 0;
       height: 80px;
 
-      &:before {
-        content: "";
+      svg {
+        fill: white;
         position: absolute;
-        width: 42px;
-        height: 37px;
-        background-size: 100% auto;
-        left: 20px;
-        top: 30px;
-      }
-
-      &.facebook:before {
-        background-position: center top;
-      }
-
-      &.twitter:before {
-        background-position: center 122px;
-      }
-
-      &.google:before {
-        background-position: center bottom;
+        left: 22px;
+        top: 36px;
+        width: 30px;
+        height: 30px;
       }
     }
   }
@@ -45,10 +32,6 @@
     display: block;
     margin: 0 1em 1em 1em;
     padding: 1em 0;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.6);
-    }
   }
 }
 

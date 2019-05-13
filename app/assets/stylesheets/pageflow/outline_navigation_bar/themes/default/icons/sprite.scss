@@ -62,30 +62,6 @@
     @include pageflow-sprite-icon-credits($target: ".button");
   }
 
-  .share.google {
-    @include pageflow-sprite-icon-google($target: ".button");
-
-    &.active {
-      @include pageflow-sprite-icon-google("active", $target: ".button");
-    }
-  }
-
-  .share.twitter {
-    @include pageflow-sprite-icon-twitter($target: ".button");
-
-    &.active {
-      @include pageflow-sprite-icon-twitter("active", $target: ".button");
-    }
-  }
-
-  .share.facebook {
-    @include pageflow-sprite-icon-facebook($target: ".button");
-
-    &.active {
-      @include pageflow-sprite-icon-facebook("active", $target: ".button");
-    }
-  }
-
   .share_box {
     a.share {
       width: 39px;

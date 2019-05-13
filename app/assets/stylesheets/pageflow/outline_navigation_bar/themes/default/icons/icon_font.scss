@@ -4,10 +4,7 @@
 
   $button-icon-color,
   $active-button-icon-color,
-  $deactivated-button-icon-color,
-
-  $share-icon-color,
-  $active-share-icon-color
+  $deactivated-button-icon-color
 ) {
   .toggle.buttons,
   .buttons_menu_item {
@@ -96,48 +93,6 @@
     .button {
       font-weight: bold;
       @include fa-info-icon;
-    }
-  }
-
-  .share_box {
-    .share {
-      width: 45px;
-
-      &:hover,
-      &.active {
-        .button:before {
-          color: $active-share-icon-color;
-        }
-      }
-    }
-
-    .button {
-      display: block;
-      text-align: center;
-    }
-  }
-
-  .share_box {
-    .button.share_google,
-    .button.share_facebook,
-    .button.share_twitter {
-      font-size: 1.5em;
-
-      &:before {
-        color: $share-icon-color;
-      }
-    }
-
-    .button.share_google {
-      @include fa-google-plus-icon;
-    }
-
-    .button.share_facebook {
-      @include fa-facebook-icon;
-    }
-
-    .button.share_twitter {
-      @include fa-twitter-icon;
     }
   }
 

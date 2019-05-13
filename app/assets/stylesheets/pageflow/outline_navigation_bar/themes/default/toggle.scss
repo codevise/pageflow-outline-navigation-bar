@@ -75,3 +75,7 @@
     @include menu-item-shadow-off;
   }
 }
+
+&.without_sharing_button .toggle.mobile_only.share.menu_item {
+  display: none;
+}

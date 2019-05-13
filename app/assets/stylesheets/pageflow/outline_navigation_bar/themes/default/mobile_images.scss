@@ -46,9 +46,3 @@ $image-dir: "pageflow/themes/default/mobile_navigation";
     }
   }
 }
-
-.mobile_sharing a {
-  &::before {
-    background-image: image-url("#{$image-dir}/sharing_icons_sprite.png");
-  }
-}

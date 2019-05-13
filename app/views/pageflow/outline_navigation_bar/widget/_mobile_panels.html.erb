@@ -1,15 +1,11 @@
 <div class="mobile_sharing panel mobile_panel">
   <div class="wrapper">
     <ul>
+      <% entry.active_share_providers.each do |provider| %>
       <li>
-        <%= render 'pageflow/entries/share_menu/facebook_link', entry: entry %>
+        <%= render "pageflow/entries/share_menu/#{provider}_link", entry: entry %>
       </li>
-      <li>
-        <%= render 'pageflow/entries/share_menu/twitter_link', entry: entry %>
-      </li>
-      <li>
-        <%= render 'pageflow/entries/share_menu/google_link', entry: entry %>
-      </li>
+      <% end %>
     </ul>
   </div>
   <div class="sub_share">
