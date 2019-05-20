@@ -1,5 +1,14 @@
 # CHANGELOG
 
+### Version 1.3.1
+
+2019-05-20
+
+[Compare changes](https://github.com/codevise/pageflow-outline-navigation-bar/compare/v1.3.0...v1.3.1)
+
+- Fix new share icons in sprite variant
+  ([#11](https://github.com/codevise/pageflow-outline-navigation-bar/pull/11))
+
 ### Version 1.3.0
 
 2019-05-20
